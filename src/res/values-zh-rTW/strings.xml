@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NTV 服務器</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="install">NTV 安裝</string>
+    <string name="action_settings">設定</string>
+    <string name="btn_background">背景執行</string>
+    <string name="btn_play">啟動</string>
+    <string name="btn_stop">停止</string>
+    <string name="btn_exit">退出</string>
+    <string name="quality">串流畫質</string>
+    <string name="full_hd">全高清(按鍵1)</string>
+    <string name="hd">高清(按鍵2)</string>
+    <string name="dvd">DVD(按鍵3)</string>
+    <string name="use_rc">藍芽遙控器</string>
+    <string name="waiting">元件安裝中，請稍待</string>
+    <string name="bt_choose">請選擇藍芽裝置</string>
+    <string name="rc_choose">請選擇遙控器內碼表</string>
+    <string name="rc_code">遙控器內碼錶</string>
+    <string name="check_password">登入檢查</string>
+    <string name="create_qrcode">產生登入QR Code</string>
+    
+    
+    
+    
+
+</resources>

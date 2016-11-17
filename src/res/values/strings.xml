@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NTV Server</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="install">NTV install</string>
+    <string name="action_settings">Setting</string>
+    <string name="btn_background">Run in backround</string>
+    <string name="btn_play">Start</string>
+    <string name="btn_stop">Stop</string>
+    <string name="btn_exit">Exit</string>
+    <string name="quality">Quality</string>
+    <string name="full_hd">Fullhd(Key 1)</string>
+    <string name="hd">HD(Key 2)</string>
+    <string name="dvd">DVD(Key 3)</string>
+    <string name="use_rc">Uses BT RC</string>
+    <string name="waiting">The components are installing</string>
+    <string name="bt_choose">Choose the bluetooth device</string>
+    <string name="rc_choose">Choose the the file of the rc code</string>
+    <string name="rc_code">RC Code</string>
+    <string name="check_password">Login check</string>
+    <string name="create_qrcode">QR code generate</string>
+    
+    
+    
+
+</resources>
