@@ -157,25 +157,38 @@ public class StreamService extends Service {
     					mInputStream = bs.getInputStream();
  
     					String cmd;
-    					
+    					int nSendCount;
     					while(RCState == RCState_Running) {
     						
     						mServer.receive(recvPacket);
     	                    cmd = new String(recvPacket.getData(), 0,
     	                            recvPacket.getLength());
     	                    
-        							
-    						if(cmd != null) {
+							if(cmd != null) {
     							if(cmd.startsWith("key:")) {
     								String func = rcMap.get(cmd.substring(4));
-    								//Log.i(tag, "cmd:"+cmd+" key:"+ cmd.substring(4)+ " func:"+func);
+    								Log.i(tag, "cmd:"+cmd+" func:"+func+ " len:"+(func.length()-2)); // [ ]
     								if(func != null) {
-    									mOutputStream.write(func.getBytes());
-    	           						mOutputStream.flush();
+    									nSendCount = 0;
+    									for(int i = 0; i < func.length(); i++) {
+    										mOutputStream.write(func.charAt(i));
+    										nSendCount++;
+    										if(nSendCount == 32) {
+    											nSendCount = 0;
+    											mOutputStream.flush();
+    											Thread.sleep(10);
+    										}
+    									}
+    									if(nSendCount != 0) {
+											mOutputStream.flush();
+										}
+    									Thread.sleep(800);
     								}
     							} 
     						}
-    						
+
+							
+							
        						
     					}
     					
@@ -192,6 +205,10 @@ public class StreamService extends Service {
 	    				} catch (IOException closeException) {
 	    				}
 	    			}
+					catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 	            	
     				try {
     					if (bs != null && bs.isConnected()) {
